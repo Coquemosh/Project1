@@ -1,0 +1,198 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery Mobile Web App</title>
+<link href="jquery-mobile/jquery.mobile.theme-1.0.min.css" rel="stylesheet" type="text/css"/>
+<link href="jquery-mobile/jquery.mobile.structure-1.0.min.css" rel="stylesheet" type="text/css"/>
+<script src="jquery-mobile/jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="jquery-mobile/jquery.mobile-1.0.min.js" type="text/javascript"></script>
+</head> 
+<body> 
+
+<div data-role="page" id="page">
+	<div data-role="header">
+		<h1>Hotel CENET</h1>
+	</div>
+	<div data-role="content">	
+		<ul data-role="listview" data-inset="true"> <!-- data-inset es para hacer la lista bonita-->
+			<li><a href="#nr1">Crear Reservación</a></li>
+            <li><a href="#historial">Historial</a></li>
+			<li><a href="#priv">Privacidad</a></li>
+		</ul>		
+	</div>
+	<div data-role="footer" style="text-align:center" data-position="fixed"> <!-- data-position="fixed" para poner la etiqueta de derechos abajo -->
+        <a data-role="button" data-theme="e" href="#nosotros" class="ui-btn-left" data-transition="slideup">Nosotros</a> <!-- data-transition="slideup" para hacer el movimiento hacía arriba en lugar de a la derecha-->
+		<span style="font-size: 8pt;">Todos los derechos resevados &copy;</span> 
+        
+	</div><!-- footer -->
+</div>
+
+<div data-role="page" id="nosotros"> <!-- página del botón nosotros -->
+	<div data-role="header">
+		<h1>Nosotros</h1>
+        <a data-role="button" data-theme="e" data-direction="reverse" data-rel="back" href="#page1" data-icon="delete" data-iconpos="notext" class="ui-btn-right"> <!-- data-direction y rel es para regresar al menu anterior -->Atrás<!-- Atrás es el tooltip-->
+        </a> <!-- Button back -->
+	</div>
+	<div data-role="content" style="text-align:justify">	
+		A unified, HTML5-based user interface system for all popular mobile device platforms, built on the rock-solid jQuery and jQuery UI foundation. Its lightweight code is built with progressive enhancement, and has a flexible, easily themeable design.		
+	</div>
+</div>
+
+<div data-role="page" id="priv">
+	<div data-role="header">
+		<h1>Privacidad</h1>
+        <a data-role="button" data-theme="e" data-direction="reverse" data-rel="back" href="#page1" data-icon="back" data-iconpos="left" class="ui-btn-left">Atras <!-- data-direction y rel es para regresar al menu anterior -->
+        </a> <!-- Button back -->
+        
+	</div>
+	<div data-role="content" style="text-align:justify">	
+		Hotel CENET, S.A. de C.V. y sus filiales y/o subsidiarias (en lo sucesivo, Posadas), con domicilio en Puebla, es una empresa comprometida en proteger su privacidad. Nuestro responsable de Protección de Datos es el Departamento de Datos Personales y se ubica en el mismo domicilio, usted podrá contactarlo en el correo electrónico: coque_16@hotmail.com	<!-- texto a desplegar -->
+	</div>
+</div>
+
+<div data-role="page" id="historial">
+	<div data-role="header">
+		<h1>Historial</h1>
+	</div>
+	<div data-role="content">	
+		<div data-role="collapsible-set">
+            <div data-role="collapsible" data-collapsed="true"> <!-- data-collapsed para cerrar o abrir el combo box-->
+                <h3>
+                    08/06/2013
+                </h3>
+                <strong>Días</strong> x<br />
+                <strong>Habitaciones</strong> y<br />
+                <strong>Personas</strong> z
+            </div>
+        </div>		
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li>
+                    <a href="#page" data-transition="flip" data-theme="" data-icon="home">
+                        Principal
+                    </a>
+                </li>
+                <li>
+                    <a href="#nr1" data-transition="slidedown" data-theme="" data-icon="plus">
+                        Reservar
+                    </a>
+                </li>
+                <li>
+                    <a href="#priv" data-transition="pop" data-theme="" data-icon="info">
+                        Privacidad
+                    </a>
+                </li>
+            </ul>
+        </div>
+	</div>
+</div>
+
+
+<div data-role="page" id="nr1">
+	<div data-role="header">
+		<h1>Reservar</h1>
+	</div>
+	<div data-role="content">	
+		<ul data-role="listview" data-divider-theme="a" data-inset="true">
+            <li data-role="list-divider" role="heading">
+                Tipo de Habitación
+            </li>
+            <li data-theme="c">
+                <a href="#" data-transition="slide">
+                    Habitación Sencilla
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="#" data-transition="slide">
+                    Habitación Doble
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="#" data-transition="slide">
+                    Suite
+                </a>
+            </li>
+        </ul>	
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li>
+                    <a href="#page" data-transition="none" data-theme="f" data-icon=""> <!-- data-theme="f" agregar para el tema-->
+                        Cancelar
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-transition="none">
+                        Siguiente
+                    </a>
+                </li>
+            </ul>
+        </div>
+	</div>
+</div>
+
+<div data-role="page" id="nr2">
+	<div data-role="header">
+		<h1>Reservar</h1>
+	</div>
+	<div data-role="content">	
+		<ul data-role="listview" data-divider-theme="a" data-inset="true">
+            <li data-role="list-divider" role="heading">
+                Datos de Reserva
+            </li>
+            <li data-theme="c">
+                Habitaciones:
+                <select id="rHabitaciones"> 
+                	<option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </li>
+            <li data-theme="c">
+                Días:
+                <select id="rDias"> 
+                	<option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </li>
+            <li data-theme="c">
+                Personas:
+                <select id="rPersonas"> 
+                	<option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </li>
+        </ul>	
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li>
+                    <a href="#page" data-transition="none" data-theme="f" data-icon=""> <!-- data-theme="f" agregar para el tema que agregamos al .css-->
+                        Cancelar
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-transition="none">
+                        Reservar
+                    </a>
+                </li>
+            </ul>
+        </div>
+	</div>
+</div>
+
+</body>
+</html>
