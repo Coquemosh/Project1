@@ -11,6 +11,7 @@
  //$('#regNom').hide(); // hide para ocultar el elemento, en este caso el nombre
 });*/
 $(function(e) {
+  document.addEventListener("deviceready",function(){
   //$('#login ul li:eq(5)').hide();
   
  /* $('#regSend').click(function(){
@@ -23,17 +24,22 @@ $(function(e) {
   
    $('#regSend').tap(function(){ 
 	if($('#regNom').val()== '' || $('#regTel').val()== '' || $('#regMail').val() == ''){
-		alert('Todos los campos son requeridos');
+		navigator.notification.alert('Todos los campos son requeridos',null,"Hotel", "Ok");
 	}else{
 		var nom  = $('#regNom').val();
 		var tel  = $('#regTel').val();
 		var mail = $('#regMail').val();
 		
-		alert(nom + '\n' + tel + '\n' + mail);
+		navigator.notification.alert(nom + '\n' + tel + '\n' + mail,null, "Hotel", "Aceptar");
 	}
   });
+ }, false);
   /* "click" a diferencia de "tab" es que el tab es como si dieras el click antes de soltar el click.*/
 });
+/*
+function loaddata(){
+	
+}*/
 
 function isLogin(){
 	return false;	
