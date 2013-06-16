@@ -10,7 +10,8 @@
   // $('#login ul li:eq(1)').hide();
  //$('#regNom').hide(); // hide para ocultar el elemento, en este caso el nombre
 });*/
-$(function(e) {
+//$(function(e) {
+$("document").ready(function(e) {
   document.addEventListener("deviceready",function(){
   //$('#login ul li:eq(5)').hide();
   
