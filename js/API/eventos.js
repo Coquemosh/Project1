@@ -13,7 +13,7 @@
 //$(function(e) {
 $(document).ready(function(e) {
   document.addEventListener("deviceready",function(){
-  //$('#login ul li:eq(5)').hide();
+  //$('#login ul li:eq(5)').hide(); // "eq" se refiere el elemento número 5
   
  /* $('#regSend').click(function(){
 	alert("s");  
@@ -23,20 +23,25 @@ $(document).ready(function(e) {
 	  window.location.href = '#login';
   }
   
-   $('#regSend').tap(function(){ 
-	if($('#regNom').val()== '' || $('#regTel').val()== '' || $('#regMail').val() == ''){
+   $('#regSend').tap(function(){ // tap 1
+	if($('#regNom').val() == '' || $('#regTel').val()== '' || 
+	   $('#regMail').val()== '' || $('#regFoto').attr('rel')==undefined ){
 		navigator.notification.alert('Todos los campos son requeridos',null,"Hotel", "Ok");
 	}else{
 		var nom  = $('#regNom').val();
 		var tel  = $('#regTel').val();
 		var mail = $('#regMail').val();
+		var foto = $('#regFoto').attr('rel');
 		
 		navigator.notification.alert(nom + '\n' + tel + '\n' + mail,null, "Hotel", "Aceptar");
 	}
-  });
- }, false);
+  }); // tap 1
+  $('#regFoto').tap(function(){ // tap 2
+	  tomarFoto();
+	}); // end tap 2
+ }, false); // End Event Listener
   /* "click" a diferencia de "tab" es que el tab es como si dieras el click antes de soltar el click.*/
-});
+}); // end Document Ready
 /*
 function loaddata(){
 	
