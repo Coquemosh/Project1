@@ -50,4 +50,8 @@ function loaddata(){
 
 function isLogin(){
 	return false;	
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> be61f6b9c090f684432f2f5a7e594f15d84126d8
