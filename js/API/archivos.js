@@ -8,7 +8,8 @@ function subirFoto(foto){
 	//options.mimeType="image/jpeg"; // No necesario, ese es el valor por default
 	
 	var ft = new FileTransfer();
-	ft.upload(foto, "http://www.igitsoft.com/pgtest.php", function(r){
+	ft.upload(foto, "http://www.igitsoft.com/pgtest.php", 
+	function(r){
 			navigator.notification.confirm("Los datos han sido registrados satisfactoriamente",
 			function(btn){
 				//if(btn==1)
