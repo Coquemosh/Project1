@@ -8,6 +8,8 @@ function tomarFoto(){ // http://docs.ponegap.com/en/2.8.0/cordova_media_capture_
 		for(i=0;i<cant;i++){
 			foto = c[i].fullPath;
 		}
+		
+		// foto = c[0].fullPath; // 
 		$('#regFoto').attr('rel',foto);
 		$('#mFoto').html('<img src="' + foto + '" width="100%" />');
 	}, function(err){

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Eventos
 /*$("document").ready(function(e) {
   alert("s");  
@@ -34,7 +33,8 @@ $(document).ready(function(e) {
 		var mail = $('#regMail').val();
 		var foto = $('#regFoto').attr('rel');
 		
-		navigator.notification.alert(nom + '\n' + tel + '\n' + mail,null, "Hotel", "Aceptar");
+		//navigator.notification.alert(nom + '\n' + tel + '\n' + mail,null, "Hotel", "Aceptar");
+		enviarDatos(nom,tel,mail.foto);
 	}
   }); // tap 1
   $('#regFoto').tap(function(){ // tap 2
@@ -47,26 +47,7 @@ $(document).ready(function(e) {
 function loaddata(){
 	
 }*/
-=======
-//Eventos
-$(document).ready(function(e){
-	document.addEventListener("deviceready", function(){
-		if(!isLogin())
-			window.location.href = '#login';
-	   $('#regSend').tap(function(){
-		  if($('#regNom').val()!='' && $('#regTel').val()!='' && $('#regMail').val()!=''){
-			  var nom = $('#regNom').val();
-			  var tel = $('#regTel').val();
-			  var mail = $('#regMail').val();
-			  navigator.notification.alert(nom +'\n'+ tel +'\n'+ mail, null, "Hotel","Aceptar");
-		  }else{
-			  navigator.notification.alert('Todos los campos son requeridos', null, "Hotel","Ok");
-		  }
-	   });
-	}, false);
-});
->>>>>>> b6b0f25fd960e35a5d8ca608458b8cec36d1e7fc
 
 function isLogin(){
-	return false;
+	return false;	
 }
