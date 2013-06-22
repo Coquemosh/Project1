@@ -4,7 +4,7 @@ function subirFoto(foto){
 	// http://docs.phonegap.com/en/2.8.0/cordova_file_file.md.html#FileTransfer
 	var options = new FileUploadOptions();
 	options.fileKey="archivo";
-	options.fileName="Jorge.jpg";
+	options.fileName="Jorge";
 	//options.mimeType="image/jpeg"; // No necesario, ese es el valor por default
 	
 	var ft = new FileTransfer();
