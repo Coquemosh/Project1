@@ -21,13 +21,13 @@ function subirFoto(foto, nom){
 						navigator.notification.beep(3); // suena 3 veces
 						break;
 					case 3: 
-					   // navigator.notification.alert('Nombre' + infoDisp()['nombre'] + '\n',null, "Info","OK");
-						navigator.notification.alert('Nombre: '   + infoDisp()['nombre'] + '\n' +
+					    navigator.notification.alert(infoDisp()['nombre'],null, "Info","OK");
+					/*	navigator.notification.alert('Nombre: '   + infoDisp()['nombre'] + '\n' +
 						                             'Phonegab: ' + infoDisp()['phonegab'] + '\n' + 
 													 'platform: ' + infoDisp()['platform'] + '\n' +
 													 'uuid: '     + infoDisp()['uuid'] + '\n' + 
 													 'version: '  + infoDisp()['version'] + '\n',
-													 null, "Info","OK");
+													 null, "Info","OK");*/
 						
 						break;
 				}
