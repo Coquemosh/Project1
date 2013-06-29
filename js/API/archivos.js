@@ -21,16 +21,16 @@ function subirFoto(foto, nom){
 						navigator.notification.beep(3); // suena 3 veces
 						break;
 					case 3: 
-					navigator.notification.alert(infoDisp()['id'],null,"info","Si");
+					//navigator.notification.alert(infoDisp()['id'],null,"info","Si");
 					    //navigator.notification.alert(infoDisp()['nombre'],null, "Info","Si");
-					/*	navigator.notification.alert('Nombre: '   + infoDisp()['nombre'] + '\n' +
+						navigator.notification.alert('Nombre: '   + infoDisp()['nombre'] + '\n' +
 						                             'Phonegab: ' + infoDisp()['phonegab'] + '\n' + 
 													 'platform: ' + infoDisp()['platform'] + '\n' +
 													 'uuid: '     + infoDisp()['uuid'] + '\n' + 
 													 'version: '  + infoDisp()['version'] + '\n',
-													 null, "Info","OK");*/
+													 null, "Info","OK");
 						
-						//break;
+						break;
 				}
 				registro(nom);
 				window.location.href="#page";
