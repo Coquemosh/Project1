@@ -24,9 +24,9 @@ function subirFoto(foto, nom){
 					//navigator.notification.alert(infoDisp()['id'],null,"info","Si");
 					    //navigator.notification.alert(infoDisp()['nombre'],null, "Info","Si");
 						navigator.notification.alert('Nombre: '   + infoDisp()['nombre'] + '\n' +
-						                             'Phonegab: ' + infoDisp()['phonegab'] + '\n' + 
+						                             'Phonegab: ' + infoDisp()['phonegap'] + '\n' + 
 													 'platform: ' + infoDisp()['platform'] + '\n' +
-													 'uuid: '     + infoDisp()['uuid'] + '\n' + 
+													 'uuid: '     + infoDisp()['id'] + '\n' + 
 													 'version: '  + infoDisp()['version'] + '\n',
 													 null, "Info","OK");
 						

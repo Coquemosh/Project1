@@ -37,8 +37,25 @@ $(document).ready(function(e){
 	   $('#regFoto').tap(function(){ // tab 2
 		   tomarFoto();
 	   }); // End Tab 2
+	   /********************************Reservaciones********************************/
+	   var nr1 = $('#nr1');
+	   nr1.find('ul[data-role=listview] li').tap(function(){
+	   		if($(this).index()!=0){
+				nr1.attr('th',$(this).index());
+			}
+	   
+	   }); // end find function
 	}, false);// End Event Listener
 	/* "click" a diferencia de "tab" es que el tab es como si dieras el click antes de soltar el click.*/
+	
+/*	var nr1 = $('#nr1');
+	   nr1.find('ul[data-role=listview] li').tap(function(){
+	   		alert($(this).index());
+				
+			
+	   
+	   });*/
+	   
 });
 
 /*
