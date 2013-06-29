@@ -13,7 +13,6 @@ New APP
 <author email="coque_16@hotmail.com">
 Jorge Lira
 </author>
-
-<icon src="images/Cenet.jpg"            gap:platform="ios"        width="57" height="57" />    
+ 
 
 </widget>
