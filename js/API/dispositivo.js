@@ -1,17 +1,14 @@
-// Dispositivo
-
+//Dispositivo
 function infoDisp(){
-	
 	var arr = [];
-	
-	arr['nombre']   = devide.model; //window.device.name;
-	arr['phonegab'] = devide.cordova;
-	arr['platform'] = devide.platform;
-	arr['id']     = devide.uuid;
-	arr['version']  = devide.version;
-	//arr['model']    = devide.model;
-	
+	arr['nombre']=device.model;
+	arr['phonegap']=device.cordova;
+	arr['plataforma']=device.platform;
+	arr['id']=device.uuid;
+	arr['version']=device.version;
+
 	return arr;
+
 	/*
 	 * var arr = [];
 	 * var arr = new Array(); 
