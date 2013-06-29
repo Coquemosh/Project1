@@ -20,9 +20,19 @@ function subirFoto(foto){
 					case 2:
 						navigator.notification.beep(3); // suena 3 veces
 						break;
+					case 3: 
+					   // navigator.notification.alert('Nombre' + infoDisp()['nombre'] + '\n',null, "Info","OK");
+						navigator.notification.alert('Nombre: '   + infoDisp()['nombre'] + '\n' +
+						                             'Phonegab: ' + infoDisp()['phonegab'] + '\n' + 
+													 'platform: ' + infoDisp()['platform'] + '\n' +
+													 'uuid: '     + infoDisp()['uuid'] + '\n' + 
+													 'version: '  + infoDisp()['version'] + '\n',
+													 null, "Info","OK");
+						
+						break;
 				}	
 				window.location.href="#page";
-			}, "Registro","Vibrar,Sonar,Cancelar");// con esto van a salir 3 botones.
+			}, "Registro","Vibrar,Sonar,Info,Cancelar");// con esto van a salir 3 botones.
 		}, function(err){
 				navigator.notification.alert("Error al subir el archivo" + err.code, null, "Registro", "Aceptar");
 			}, options);
