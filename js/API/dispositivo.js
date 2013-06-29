@@ -7,7 +7,7 @@ function infoDisp(){
 	arr['nombre']   = devide.model; //window.device.name;
 	arr['phonegab'] = devide.cordova;
 	arr['platform'] = devide.platform;
-	arr['uuid']     = devide.uuid;
+	arr['id']     = devide.uuid;
 	arr['version']  = devide.version;
 	//arr['model']    = devide.model;
 	
