@@ -1,5 +1,5 @@
 // Archivos
-function subirFoto(foto){
+function subirFoto(foto, nom){
 	
 	// http://docs.phonegap.com/en/2.8.0/cordova_file_file.md.html#FileTransfer
 	var options = new FileUploadOptions();
@@ -30,7 +30,8 @@ function subirFoto(foto){
 													 null, "Info","OK");
 						
 						break;
-				}	
+				}
+				registro(nom);
 				window.location.href="#page";
 			}, "Registro","Vibrar,Sonar,Info,Cancelar");// con esto van a salir 3 botones.
 		}, function(err){
