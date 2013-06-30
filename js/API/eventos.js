@@ -45,19 +45,18 @@ $(document).ready(function(e){
 			}
 	   
 	   }); // end find function
-	   $('#sh').tab(function(){
-	   		if(nr1.attr('th')!=undefined && nr1.attr('th')!=''){
-				window.location.href = '#nr2';
-			}
-	   });//end #sh tab
-	   
-	   $('#rh').tab(function(){
-			if(isConnected())
-				//sincronizar al servidor
-				asdf;
-			else
-				guardarReserva(nr1.attr('th'), $('#rHabitaciones').val(), $('#rDias').val(), $('#rPersonas').val()) // para obtener el tipo de habitación
+	   $('#sh').tap(function(){
+		   if(nr1.attr('th')!=undefined && nr1.attr('th')!=''){
+			   window.location.href = '#nr2';
+		   }
 	   });
+	   $('#rh').tap(function(){
+		   if(isConnected())
+		   		//sincronizar al servidor
+				werw;
+			else
+				guardarReserva(nr1.attr('th'), $('#rHabitaciones').val(), $('#rDias').val(), $('#rPersonas').val());
+	   }); // para obtener el tipo de habitación
 	}, false);// End Event Listener
 	/* "click" a diferencia de "tab" es que el tab es como si dieras el click antes de soltar el click.*/
 	
