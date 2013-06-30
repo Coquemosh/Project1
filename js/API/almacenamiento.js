@@ -8,32 +8,26 @@ function registro(usuario){
 
 //Acceso a la base de datos
 function accesoBD(){
-	var bd = window.openDatabase('Hotel','1.0','hotel',2000000);
+	var bd = window.openDatabase('Hotel','1.0','Hotel', 2000000);
 	return bd;
 }
-
 function guardarReserva(th, ha, di, pe){
-	accesoBD().transaction(function(tx) {
+	accesoBD().transaction(function(tx){
 		tx.executeSql('CREATE TABLE IF NOT EXISTS reservas (id unique, th, ha, di, pe)');
-		
-		tx.executeSql('INSERT INTO reservas (th, ha, di, pe) VALUES ("'+th+'","'+ha+'", "'+di+'", "'+pe+'")');
-	}, function errorCB(err) {
+		tx.executeSql('INSERT INTO reservas (th, ha, di, pe) VALUES ("'+th+'","'+ha+'","'+di+'","'+pe+'")');
+	}, function(err){
 		alert("Error processing SQL: "+err);
-	}, function successCB() {
-		navigator.notification.alert("Esperando conexión con servidor...",null,"Guardado","Aceptar");
+	}, function(){
+		navigator.notification.alert("Esperando conexión con servidor...", null, "Guardado","Aceptar");
 	});
-
 }
-
 function guardarHistorial(th, ha, di, pe){
-	accesoBD().transaction(function(tx) {
+	accesoBD().transaction(function(tx){
 		tx.executeSql('CREATE TABLE IF NOT EXISTS historial (id unique, th, ha, di, pe)');
-		
-		tx.executeSql('INSERT INTO historial (th, ha, di, pe) VALUES ("'+th+'","'+ha+'", "'+di+'", "'+pe+'")');
-	}, function errorCB(err) {
+		tx.executeSql('INSERT INTO historial (th, ha, di, pe) VALUES ("'+th+'","'+ha+'","'+di+'","'+pe+'")');
+	}, function(err){
 		alert("Error processing SQL: "+err);
-	}, function successCB() {
-		navigator.notification.alert("Hecho",null,"Guardado","Aceptar");
+	}, function(){
+		navigator.notification.alert("Hecho", null, "Guardado","Aceptar");
 	});
-
 }

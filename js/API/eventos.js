@@ -53,7 +53,7 @@ $(document).ready(function(e){
 	   $('#rh').tap(function(){
 		   if(isConnected())
 		   		//sincronizar al servidor
-				werw;
+				asd;
 			else
 				guardarReserva(nr1.attr('th'), $('#rHabitaciones').val(), $('#rDias').val(), $('#rPersonas').val());
 	   }); // para obtener el tipo de habitación
@@ -76,13 +76,11 @@ function loaddata(){
 }*/
 
 function isLogin(){
-	
-	if(window.localStorage.getItem('id') != undefined)
+	if(window.localStorage.getItem('id')!=undefined)
 		return true;
 	else
 		return false;
 }
-
 function isConnected(){
 	return false;
 }
