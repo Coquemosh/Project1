@@ -40,11 +40,10 @@ $(document).ready(function(e){
 	   /********************************Reservaciones********************************/
 	   var nr1 = $('#nr1');
 	   nr1.find('ul[data-role=listview] li').tap(function(){
-	   		if($(this).index()!=0){
+		   if($(this).index()!=0){
 				nr1.attr('th',$(this).index());
-			}
-	   
-	   }); // end find function
+		   }
+	   });
 	   $('#sh').tap(function(){
 		   if(nr1.attr('th')!=undefined && nr1.attr('th')!=''){
 			   window.location.href = '#nr2';
@@ -53,27 +52,12 @@ $(document).ready(function(e){
 	   $('#rh').tap(function(){
 		   if(isConnected())
 		   		//sincronizar al servidor
-				asd;
+				werw;
 			else
 				guardarReserva(nr1.attr('th'), $('#rHabitaciones').val(), $('#rDias').val(), $('#rPersonas').val());
-	   }); // para obtener el tipo de habitación
-	}, false);// End Event Listener
-	/* "click" a diferencia de "tab" es que el tab es como si dieras el click antes de soltar el click.*/
-	
-/*	var nr1 = $('#nr1');
-	   nr1.find('ul[data-role=listview] li').tap(function(){
-	   		alert($(this).index());
-				
-			
-	   
-	   });*/
-	   
+	   });
+	}, false);
 });
-
-/*
-function loaddata(){
-	
-}*/
 
 function isLogin(){
 	if(window.localStorage.getItem('id')!=undefined)
