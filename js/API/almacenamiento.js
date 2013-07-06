@@ -66,5 +66,6 @@ function borrarReserva(id){
 		alert("Error processing SQL: "+err.code);
 	}, function(){
 		navigator.notification.alert("Hecho", null, "Registro Eliminado","Aceptar");
+		return 1;
 	});
 }
