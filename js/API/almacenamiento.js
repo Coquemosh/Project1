@@ -12,6 +12,7 @@ function accesoBD(){
 	return bd;
 }
 function guardarReserva(th, ha, di, pe){
+	alert();
 	accesoBD().transaction(function(tx){
 		tx.executeSql('CREATE TABLE IF NOT EXISTS reservas (id unique, th, ha, di, pe)');
 		tx.executeSql('INSERT INTO reservas (th, ha, di, pe) VALUES ("'+th+'","'+ha+'","'+di+'","'+pe+'")');
