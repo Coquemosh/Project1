@@ -26,7 +26,7 @@ function guardarHistorial(th, ha, di, pe){
 		tx.executeSql('CREATE TABLE IF NOT EXISTS historial (id unique, th, ha, di, pe)');
 		tx.executeSql('INSERT INTO historial (th, ha, di, pe) VALUES ("'+th+'","'+ha+'","'+di+'","'+pe+'")');
 	}, function(err){
-		alert("Error processing SQL: "+err);
+		alert("Error processing SQL guardar reserva: "+err);
 	}, function(){
 		navigator.notification.alert("Hecho", null, "Guardado","Aceptar");
 	});
@@ -51,7 +51,7 @@ function leerReservas(){
 					
 				}
 			}
-		},function(err){ alert('Error: ' + err.code);});
+		},function(err){ alert('Error leer reserva: ' + err.code);});
 	}, function(err){
 		navigator.notification.alert("Error", null, "Error", "Aceptar");
 	}, function(){
@@ -63,7 +63,7 @@ function borrarReserva(id){
 	accesoBD().transaction(function(tx){
 		tx.executeSql('DELETE FROM reservas WHERE id =' +id);	
 	},function(err){
-		alert("Error processing SQL: "+err.code);
+		alert("Error processing SQL delete borrar reserva: "+err.code);
 	}, function(){
 		navigator.notification.alert("Hecho", null, "Registro Eliminado","Aceptar");
 		return 1;
@@ -92,7 +92,7 @@ function leerHistorial(){
 				} // end For
 				$('#historial div[data-role=content]').html(code);
 			}
-		},function(err){ alert('Error: ' + err.code);});
+		},function(err){ alert('Error leer historial: ' + err.code);});
 	}, function(err){
 		navigator.notification.alert("Error", null, "Error", "Aceptar");
 	}, function(){
