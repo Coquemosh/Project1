@@ -60,7 +60,7 @@ $(document).ready(function(e){
 	   jQuery( "#historial" ).on("pageload", 
 	   function(event) {  
 	   	leerHistorial();
-	   })
+	   });
 	}, false);
 });
 
