@@ -34,3 +34,4 @@ function subirReserva(id, th, ha, di, pe){
 	  alert( "Data Saved: " + msg );
 	});
 }
+

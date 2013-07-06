@@ -51,14 +51,16 @@ $(document).ready(function(e){
 	   });
 	   $('#rh').tap(function(){
 		   if(isConnected()){
-			   alert('subir reserva');
 		   		subirReserva(0, nr1.attr('th'), $('#rHabitaciones').val(), $('#rDias').val(), $('#rPersonas').val());
 		   }
 			else{
-				alert('guardar reserva');
 				guardarReserva(nr1.attr('th'), $('#rHabitaciones').val(), $('#rDias').val(), $('#rPersonas').val());
 			}
 	   });
+	   jQuery( "#historial" ).on("pageload", 
+	   function(event) {  
+	   	leerHistorial();
+	   })
 	}, false);
 });
 

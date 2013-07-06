@@ -69,3 +69,33 @@ function borrarReserva(id){
 		return 1;
 	});
 }
+
+function leerHistorial(){
+	accesoBD().transaction(function(tx){
+		tx.executeSql('SELECT * FROM historial',[], 
+		function(tx2, resultado){
+			var largo = resultado.rows.length;
+			
+			if(largo>0){
+				var code = '';
+				for(i=0;i<largo;i++){
+					code += '<div data-role="collapsible-set">'+
+								'<div data-role="collapsible" data-collapsed="true">' + 
+								   ' <h3>' +
+									   '08/06/2013' +
+									'</h3>' +
+									'<strong>Días</strong> '         + resultado.row.item(i).di+'<br />' +
+									'<strong>Habitaciones</strong> ' + resultado.row.item(i).ha+'<br />' +
+									'<strong>Personas</strong> '     + resultado.row.item(i).pe +
+								'</div>' +
+							'</div>	';
+				} // end For
+				$('#historial div[data-role=content]').html(code);
+			}
+		},function(err){ alert('Error: ' + err.code);});
+	}, function(err){
+		navigator.notification.alert("Error", null, "Error", "Aceptar");
+	}, function(){
+		return 1;
+	});
+}
