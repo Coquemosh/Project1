@@ -50,11 +50,16 @@ $(document).ready(function(e){
 		   }
 	   });
 	   $('#rh').tap(function(){
-		   if(isConnected())
+		   alert('tab ');
+		   if(isConnected()){
 		   		//sincronizar al servidor
+				alert('connected');
 				werw;
-			else
+		   }
+			else{
+			alert('call function');
 				guardarReserva(nr1.attr('th'), $('#rHabitaciones').val(), $('#rDias').val(), $('#rPersonas').val());
+			}
 	   });
 	}, false);
 });
