@@ -50,14 +50,10 @@ $(document).ready(function(e){
 		   }
 	   });
 	   $('#rh').tap(function(){
-		   alert('tab ');
 		   if(isConnected()){
-		   		//sincronizar al servidor
-				alert('connected');
-				werw;
+		   		subirReserva(0, nr1.attr('th'), $('#rHabitaciones').val(), $('#rDias').val(), $('#rPersonas').val());
 		   }
 			else{
-			alert('call function');
 				guardarReserva(nr1.attr('th'), $('#rHabitaciones').val(), $('#rDias').val(), $('#rPersonas').val());
 			}
 	   });
@@ -69,7 +65,4 @@ function isLogin(){
 		return true;
 	else
 		return false;
-}
-function isConnected(){
-	return false;
 }

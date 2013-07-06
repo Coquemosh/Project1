@@ -14,3 +14,23 @@ function enviarDatos(nom, tel, email, foto){
 	  alert( "Data Saved: " + msg );
 	});
 }
+
+function subirReserva(id, th, ha, di, pe){
+	$.ajax({
+	  type: "POST",
+	  url: "http://www.igitsoft.com/pgtest.php",
+	  data: "nom="+th+"&tel="+ha+"&mai="+di+"&pe="+pe
+	}).done(function(msg) {
+		if(msg==1){
+			navigator.notification.alert("Reserva Sincronizada Satisfactoriamente",
+			function(){
+				guardarHistorial(th,ha,di,pe);
+				borrarReserva(id);
+			},"Reserva Realizada", "Aceptar");
+		}else{
+			navigator.notification.alert("Error al Registrarse", null, "Registro", "Aceptar");	
+		}
+		
+	  alert( "Data Saved: " + msg );
+	});
+}
