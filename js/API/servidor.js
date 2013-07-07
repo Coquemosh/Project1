@@ -30,8 +30,6 @@ function subirReserva(id, th, ha, di, pe){
 		}else{
 			navigator.notification.alert("Error al Registrarse", null, "Registro", "Aceptar");	
 		}
-		
-	  alert( "Data Saved: " + msg );
 	});
 }
 

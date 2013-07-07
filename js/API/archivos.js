@@ -10,7 +10,7 @@ function subirFoto(foto, nom){
 	var ft = new FileTransfer();
 	ft.upload(foto, "http://www.igitsoft.com/pgtest.php", 
 	function(r){
-			navigator.notification.confirm("Los datos han sido registrados satisfactoriamente",
+			navigator.notification.confirm("Los datos han sido registrados satisfatoriamente",
 			function(btn){
 				//if(btn==1)
 				switch(btn){

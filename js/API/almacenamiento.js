@@ -61,7 +61,7 @@ function leerReservas(){
 
 function borrarReserva(id){
 	accesoBD().transaction(function(tx){
-		tx.executeSql('DELETE FROM reservas WHERE id =' +id);	
+		tx.executeSql('DELETE FROM reservas WHERE id ="' +id+'"');	
 	},function(err){
 		alert("Error processing SQL delete borrar reserva: "+err.code);
 	}, function(){
