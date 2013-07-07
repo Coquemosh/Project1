@@ -61,11 +61,11 @@ function leerReservas(){
 
 function borrarReserva(id){
 	accesoBD().transaction(function(tx){
-		tx.executeSql('DELETE FROM reservas WHERE id ="' +id+'"');	
+		tx.executeSql('DELETE FROM reservas WHERE id ="'+id+'"');	
 	},function(err){
-		alert("Error processing SQL delete borrar reserva: "+err.code);
+		alert("Error processing SQL borrar reserva: "+err.code);
 	}, function(){
-		navigator.notification.alert("Hecho", null, "Registro Eliminado","Aceptar");
+		//navigator.notification.alert("Hecho", null, "Registro Eliminado","Aceptar");
 		return 1;
 	});
 }
@@ -90,7 +90,8 @@ function leerHistorial(){
 								'</div>' +
 							'</div>	';
 				} // end For
-				$('#historial div[data-role=content]').html(code);
+				//$('#historial div[data-role=content]').html(code);
+				alert(code);
 			}
 		},function(err){ alert('Error leer historial: ' + err.code);});
 	}, function(err){
